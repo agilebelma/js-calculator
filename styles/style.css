@@ -8,16 +8,28 @@ h1 {
     margin: auto;
     color: yellow;
     background-color: purple;
-    width: 350px;
+    width: 280px;
     height: 400px;
     text-align: center;
 }
 
-#displayScreen {
+#displayPanel {
     display: block;
     background-color: white;
     color: purple;
-    margin: 10px;
+    margin: 20px;
     margin-top: 0;
+    padding: 10px;
+    height: 20px;
+}
 
+#buttonContainer {
+    margin: 2px;
+    display: block;
+}
+
+.calButton {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
 }
