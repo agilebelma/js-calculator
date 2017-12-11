@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+    color: purple;
+}
+
+#calculatorFrame {
+    margin: auto;
+    color: yellow;
+    background-color: purple;
+    width: 350px;
+    height: 400px;
+    text-align: center;
+}
