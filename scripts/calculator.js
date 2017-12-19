@@ -82,6 +82,16 @@ function buttonPercentPressed() {
 
 function buttonDotPressed() {
     console.log("dot pressed");
+
+    if (numStr.length <= 0) {
+        numStr = "0";
+    }
+
+    if (numStr.indexOf(".") < 0) {
+        numStr += ".";
+    }
+
+    display(numStr);
 }
 
 function buttonNumPressed(num) {
