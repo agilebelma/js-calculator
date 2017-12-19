@@ -77,7 +77,7 @@ function buttonClearEntryPressed() {
 }
 
 function buttonPercentPressed() {
-    console.log("Percent Pressed");
+    //console.log("Percent Pressed");
 
     let arrLength = arrInput.length;
 
@@ -86,10 +86,10 @@ function buttonPercentPressed() {
         if (numStr != undefined) {
             tmpStr = numStr;
         }
-        console.log("tmpStr: ", tmpStr);
+        //console.log("tmpStr: ", tmpStr);
 
         let result = Number(tmpStr) / 100;
-        console.log("result = " , result);
+        //console.log("result = " , result);
         display(result);
         numStr = "" + result;
         
@@ -102,7 +102,7 @@ function buttonPercentPressed() {
 }
 
 function buttonDotPressed() {
-    console.log("dot pressed");
+    //console.log("dot pressed");
 
     if (numStr.length <= 0) {
         numStr = "0";
@@ -116,7 +116,7 @@ function buttonDotPressed() {
 }
 
 function buttonNumPressed(num) {
-    console.log("num pressed: ", num);
+    //console.log("num pressed: ", num);
 
     if (numStr.length < 17) {
         numStr += num;
@@ -126,8 +126,8 @@ function buttonNumPressed(num) {
 }
 
 function buttonOprPressed(opr) {
-    console.log("operator pressed", opr);
-    console.log("numStr :", numStr);
+    //console.log("operator pressed", opr);
+    //console.log("numStr :", numStr);
 
     if (numStr.length <= 0) {
         let displayPanel = document.getElementById("displayPanel");
@@ -139,7 +139,7 @@ function buttonOprPressed(opr) {
 
     let statementStr = arrInput.join(" ");
     numStr = "";
-    console.log("statement: ", statementStr);
+    //console.log("statement: ", statementStr);
 
     calculate();
 
@@ -148,23 +148,23 @@ function buttonOprPressed(opr) {
 
 function calculate() {
 
-    console.log("1: ", arrInput);
+    //console.log("1: ", arrInput);
     let arrLength = arrInput.length;
 
     let statementStr = arrInput.slice(0, arrLength-1).join(" "); 
-    console.log(statementStr);
-    console.log("2: ", arrInput);
+    //console.log(statementStr);
+    //console.log("2: ", arrInput);
 
     let result = eval(statementStr);
     display(result);
-    console.log("result: ", result);
+    //console.log("result: ", result);
 
     if (arrInput[arrLength-1] == "=") {
-        console.log("3: ", arrInput);
+        //console.log("3: ", arrInput);
         arrInput = [];
     }
 
-    console.log("finished calculate: ", arrInput);
+    //console.log("finished calculate: ", arrInput);
 
 }
 
