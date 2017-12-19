@@ -78,6 +78,27 @@ function buttonClearEntryPressed() {
 
 function buttonPercentPressed() {
     console.log("Percent Pressed");
+
+    let arrLength = arrInput.length;
+
+    if (arrLength < 2) {
+        let tmpStr = "0";
+        if (numStr != undefined) {
+            tmpStr = numStr;
+        }
+        console.log("tmpStr: ", tmpStr);
+
+        let result = Number(tmpStr) / 100;
+        console.log("result = " , result);
+        display(result);
+        numStr = "" + result;
+        
+    } else {
+        let origNum = arrInput[arrLength-2];
+        let result = Number(origNum) * Number(numStr) / 100;
+        display(result);
+        numStr = "" + result;
+    }
 }
 
 function buttonDotPressed() {
