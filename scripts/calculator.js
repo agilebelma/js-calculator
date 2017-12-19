@@ -110,24 +110,30 @@ function buttonOprPressed(opr) {
     numStr = "";
     console.log("statement: ", statementStr);
 
-    calculate(arrInput);
+    calculate();
 
 }
 
 
-function calculate(arrInput) {
+function calculate() {
+
+    console.log("1: ", arrInput);
     let arrLength = arrInput.length;
 
     let statementStr = arrInput.slice(0, arrLength-1).join(" "); 
     console.log(statementStr);
+    console.log("2: ", arrInput);
 
     let result = eval(statementStr);
     display(result);
     console.log("result: ", result);
 
-    if (arrInput[0] == "=") {
+    if (arrInput[arrLength-1] == "=") {
+        console.log("3: ", arrInput);
         arrInput = [];
     }
+
+    console.log("finished calculate: ", arrInput);
 
 }
 
